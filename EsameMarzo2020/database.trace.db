@@ -1,0 +1,236 @@
+2020-03-21 12:59:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE CLIENTE( NOME VARCHAR(30), COGNOME VARCHAR(30), DATADINASCITA DATE, CF VARCHAR(30) PRIMARY KEY, TESSERA IMAGE CARTA[*] VARCHAR(30));"; expected "(, FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE CLIENTE( NOME VARCHAR(30), COGNOME VARCHAR(30), DATADINASCITA DATE, CF VARCHAR(30) PRIMARY KEY, TESSERA IMAGE CARTA VARCHAR(30)); [42001-199]
+2020-03-21 13:01:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Unknown data type: ; SQL statement:
+CREATE TABLE FARMACI( CODICE VARCHAR(30) PRIMARY KEY, NOME VARCHAR(30) NOT NULL, PREZZO FLOAT, QUANTITA INT, PRESCRIVIBILE BOOLEAN, PRINCIPI (CODICE VARCHAR(30), NOME VARCHAR(30), QUANTITA INT, TIPO VARCHAR(30), DOSE INT) PRESCRIVIBILE BOOLEAN), GALENICO BOOLEAN); [50004-199]
+	at com.h2database@1.4.199/org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at com.h2database@1.4.199/org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at com.h2database@1.4.199/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.199/org.h2.message.DbException.get(DbException.java:181)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseColumnWithType(Parser.java:5524)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseColumnForTable(Parser.java:5254)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseTableColumnDefinition(Parser.java:7932)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseCreateTable(Parser.java:7832)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseCreate(Parser.java:5818)
+	at com.h2database@1.4.199/org.h2.command.Parser.parsePrepared(Parser.java:846)
+	at com.h2database@1.4.199/org.h2.command.Parser.parse(Parser.java:788)
+	at com.h2database@1.4.199/org.h2.command.Parser.parse(Parser.java:760)
+	at com.h2database@1.4.199/org.h2.command.Parser.prepareCommand(Parser.java:683)
+	at com.h2database@1.4.199/org.h2.engine.Session.prepareLocal(Session.java:627)
+	at com.h2database@1.4.199/org.h2.engine.Session.prepareCommand(Session.java:565)
+	at com.h2database@1.4.199/org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at com.h2database@1.4.199/org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:77)
+	at com.h2database@1.4.199/org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:349)
+	at EsameMarzo2020/Database.InizializzaDB.main(InizializzaDB.java:41)
+2020-03-21 13:03:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CLIENTE" already exists; SQL statement:
+CREATE TABLE CLIENTE( NOME VARCHAR(30), COGNOME VARCHAR(30), DATADINASCITA DATE, CF VARCHAR(30) PRIMARY KEY, TESSERA IMAGE, CARTA VARCHAR(30)); [42101-199]
+2020-03-21 13:04:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Unknown data type: ; SQL statement:
+CREATE TABLE FARMACI( CODICE VARCHAR(30) PRIMARY KEY, NOME VARCHAR(30) NOT NULL, PREZZO FLOAT, QUANTITA INT, PRESCRIVIBILE BOOLEAN, PRINCIPI [CODICE VARCHAR(30), NOME VARCHAR(30), QUANTITA INT, TIPO VARCHAR(30), DOSE INT) PRESCRIVIBILE BOOLEAN], GALENICO BOOLEAN); [50004-199]
+	at com.h2database@1.4.199/org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at com.h2database@1.4.199/org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at com.h2database@1.4.199/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.199/org.h2.message.DbException.get(DbException.java:181)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseColumnWithType(Parser.java:5524)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseColumnForTable(Parser.java:5254)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseTableColumnDefinition(Parser.java:7932)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseCreateTable(Parser.java:7832)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseCreate(Parser.java:5818)
+	at com.h2database@1.4.199/org.h2.command.Parser.parsePrepared(Parser.java:846)
+	at com.h2database@1.4.199/org.h2.command.Parser.parse(Parser.java:788)
+	at com.h2database@1.4.199/org.h2.command.Parser.parse(Parser.java:760)
+	at com.h2database@1.4.199/org.h2.command.Parser.prepareCommand(Parser.java:683)
+	at com.h2database@1.4.199/org.h2.engine.Session.prepareLocal(Session.java:627)
+	at com.h2database@1.4.199/org.h2.engine.Session.prepareCommand(Session.java:565)
+	at com.h2database@1.4.199/org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at com.h2database@1.4.199/org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:77)
+	at com.h2database@1.4.199/org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:349)
+	at EsameMarzo2020/Database.InizializzaDB.main(InizializzaDB.java:41)
+2020-03-21 13:05:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Unknown data type: ; SQL statement:
+CREATE TABLE FARMACI( CODICE VARCHAR(30) PRIMARY KEY, NOME VARCHAR(30) NOT NULL, PREZZO FLOAT, QUANTITA INT, PRESCRIVIBILE BOOLEAN, PRINCIPI [CODICE VARCHAR(30), NOME VARCHAR(30), QUANTITA INT, TIPO VARCHAR(30), DOSE INT, PRESCRIVIBILE BOOLEAN], GALENICO BOOLEAN); [50004-199]
+	at com.h2database@1.4.199/org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at com.h2database@1.4.199/org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at com.h2database@1.4.199/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.199/org.h2.message.DbException.get(DbException.java:181)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseColumnWithType(Parser.java:5524)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseColumnForTable(Parser.java:5254)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseTableColumnDefinition(Parser.java:7932)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseCreateTable(Parser.java:7832)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseCreate(Parser.java:5818)
+	at com.h2database@1.4.199/org.h2.command.Parser.parsePrepared(Parser.java:846)
+	at com.h2database@1.4.199/org.h2.command.Parser.parse(Parser.java:788)
+	at com.h2database@1.4.199/org.h2.command.Parser.parse(Parser.java:760)
+	at com.h2database@1.4.199/org.h2.command.Parser.prepareCommand(Parser.java:683)
+	at com.h2database@1.4.199/org.h2.engine.Session.prepareLocal(Session.java:627)
+	at com.h2database@1.4.199/org.h2.engine.Session.prepareCommand(Session.java:565)
+	at com.h2database@1.4.199/org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at com.h2database@1.4.199/org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:77)
+	at com.h2database@1.4.199/org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:349)
+	at EsameMarzo2020/Database.InizializzaDB.main(InizializzaDB.java:41)
+2020-03-21 13:08:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE FARMACI( CODICE VARCHAR(30) PRIMARY KEY, NOME VARCHAR(30) NOT NULL, PREZZO FLOAT, QUANTITA INT, PRESCRIVIBILE BOOLEAN, PRINCIPI OBJECT[[*]CODICE VARCHAR(30), NOME VARCHAR(30), QUANTITA INT, TIPO VARCHAR(30), DOSE INT, PRESCRIVIBILE BOOLEAN], GALENICO BOOLEAN);"; expected "(, FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE FARMACI( CODICE VARCHAR(30) PRIMARY KEY, NOME VARCHAR(30) NOT NULL, PREZZO FLOAT, QUANTITA INT, PRESCRIVIBILE BOOLEAN, PRINCIPI OBJECT[CODICE VARCHAR(30), NOME VARCHAR(30), QUANTITA INT, TIPO VARCHAR(30), DOSE INT, PRESCRIVIBILE BOOLEAN], GALENICO BOOLEAN); [42001-199]
+2020-03-21 13:13:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Unknown data type: "TABLE"; SQL statement:
+CREATE TABLE FARMACI( CODICE VARCHAR(30) PRIMARY KEY, NOME VARCHAR(30) NOT NULL, PREZZO FLOAT, QUANTITA INT, PRESCRIVIBILE BOOLEAN, PRINCIPI TABLE (CODICE VARCHAR(30), NOME VARCHAR(30), QUANTITA INT, TIPO VARCHAR(30), DOSE INT, PRESCRIVIBILE BOOLEAN), GALENICO BOOLEAN); [50004-199]
+	at com.h2database@1.4.199/org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at com.h2database@1.4.199/org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at com.h2database@1.4.199/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.199/org.h2.message.DbException.get(DbException.java:181)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseColumnWithType(Parser.java:5524)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseColumnForTable(Parser.java:5254)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseTableColumnDefinition(Parser.java:7932)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseCreateTable(Parser.java:7832)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseCreate(Parser.java:5818)
+	at com.h2database@1.4.199/org.h2.command.Parser.parsePrepared(Parser.java:846)
+	at com.h2database@1.4.199/org.h2.command.Parser.parse(Parser.java:788)
+	at com.h2database@1.4.199/org.h2.command.Parser.parse(Parser.java:760)
+	at com.h2database@1.4.199/org.h2.command.Parser.prepareCommand(Parser.java:683)
+	at com.h2database@1.4.199/org.h2.engine.Session.prepareLocal(Session.java:627)
+	at com.h2database@1.4.199/org.h2.engine.Session.prepareCommand(Session.java:565)
+	at com.h2database@1.4.199/org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at com.h2database@1.4.199/org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:77)
+	at com.h2database@1.4.199/org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:349)
+	at EsameMarzo2020/Database.InizializzaDB.main(InizializzaDB.java:41)
+2020-03-21 13:14:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Unknown data type: "TABLE"; SQL statement:
+CREATE TABLE FARMACI( CODICE VARCHAR(30) PRIMARY KEY, NOME VARCHAR(30) NOT NULL, PREZZO FLOAT, QUANTITA INT, PRESCRIVIBILE BOOLEAN, CREATE TABLE PRINCIPI (CODICE VARCHAR(30), NOME VARCHAR(30), QUANTITA INT, TIPO VARCHAR(30), DOSE INT, PRESCRIVIBILE BOOLEAN), GALENICO BOOLEAN); [50004-199]
+	at com.h2database@1.4.199/org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at com.h2database@1.4.199/org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at com.h2database@1.4.199/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.199/org.h2.message.DbException.get(DbException.java:181)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseColumnWithType(Parser.java:5524)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseColumnForTable(Parser.java:5254)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseTableColumnDefinition(Parser.java:7932)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseCreateTable(Parser.java:7832)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseCreate(Parser.java:5818)
+	at com.h2database@1.4.199/org.h2.command.Parser.parsePrepared(Parser.java:846)
+	at com.h2database@1.4.199/org.h2.command.Parser.parse(Parser.java:788)
+	at com.h2database@1.4.199/org.h2.command.Parser.parse(Parser.java:760)
+	at com.h2database@1.4.199/org.h2.command.Parser.prepareCommand(Parser.java:683)
+	at com.h2database@1.4.199/org.h2.engine.Session.prepareLocal(Session.java:627)
+	at com.h2database@1.4.199/org.h2.engine.Session.prepareCommand(Session.java:565)
+	at com.h2database@1.4.199/org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at com.h2database@1.4.199/org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:77)
+	at com.h2database@1.4.199/org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:349)
+	at EsameMarzo2020/Database.InizializzaDB.main(InizializzaDB.java:41)
+2020-03-21 13:22:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Unknown data type: "PRINCIPI"; SQL statement:
+CREATE TABLE FARMACI( CODICE VARCHAR(30) PRIMARY KEY, NOME VARCHAR(30) NOT NULL, PREZZO FLOAT, QUANTITA INT, PRESCRIVIBILE BOOLEAN, PRINCIPIO PRINCIPI, GALENICO BOOLEAN); [50004-199]
+	at com.h2database@1.4.199/org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at com.h2database@1.4.199/org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at com.h2database@1.4.199/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.199/org.h2.message.DbException.get(DbException.java:181)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseColumnWithType(Parser.java:5524)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseColumnForTable(Parser.java:5254)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseTableColumnDefinition(Parser.java:7932)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseCreateTable(Parser.java:7832)
+	at com.h2database@1.4.199/org.h2.command.Parser.parseCreate(Parser.java:5818)
+	at com.h2database@1.4.199/org.h2.command.Parser.parsePrepared(Parser.java:846)
+	at com.h2database@1.4.199/org.h2.command.Parser.parse(Parser.java:788)
+	at com.h2database@1.4.199/org.h2.command.Parser.parse(Parser.java:760)
+	at com.h2database@1.4.199/org.h2.command.Parser.prepareCommand(Parser.java:683)
+	at com.h2database@1.4.199/org.h2.engine.Session.prepareLocal(Session.java:627)
+	at com.h2database@1.4.199/org.h2.engine.Session.prepareCommand(Session.java:565)
+	at com.h2database@1.4.199/org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at com.h2database@1.4.199/org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:77)
+	at com.h2database@1.4.199/org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:349)
+	at EsameMarzo2020/Database.InizializzaDB.main(InizializzaDB.java:54)
+2020-03-21 13:29:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CLIENTI" not found; SQL statement:
+INSERT INTO CLIENTI VALUES(?,?,?,'DBLCIROABF7788',?,?); [42102-199]
+2020-03-21 13:33:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Cannot parse "DATE" constant "21/01/1998"; SQL statement:
+INSERT INTO CLIENTI VALUES(?,?,?,'DBLCIROABF7788',?,?) -- (?1, ?2, ?3, 'DBLCIROABF7788', ?4, ?5) [22007-199]
+	at com.h2database@1.4.199/org.h2.message.DbException.getJdbcSQLException(DbException.java:455)
+	at com.h2database@1.4.199/org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at com.h2database@1.4.199/org.h2.message.DbException.get(DbException.java:194)
+	at com.h2database@1.4.199/org.h2.value.ValueDate.parse(ValueDate.java:75)
+	at com.h2database@1.4.199/org.h2.value.Value.convertToDate(Value.java:1059)
+	at com.h2database@1.4.199/org.h2.value.Value.convertTo(Value.java:774)
+	at com.h2database@1.4.199/org.h2.value.Value.convertTo(Value.java:735)
+	at com.h2database@1.4.199/org.h2.table.Column.convert(Column.java:199)
+	at com.h2database@1.4.199/org.h2.command.dml.Insert.insertRows(Insert.java:164)
+	at com.h2database@1.4.199/org.h2.command.dml.Insert.update(Insert.java:132)
+	at com.h2database@1.4.199/org.h2.command.CommandContainer.update(CommandContainer.java:133)
+	at com.h2database@1.4.199/org.h2.command.Command.executeUpdate(Command.java:267)
+	at com.h2database@1.4.199/org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:200)
+	at com.h2database@1.4.199/org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:154)
+	at EsameMarzo2020/Database.ClientiDAO.insertCliente(ClientiDAO.java:24)
+	at EsameMarzo2020/Control.GestioneClienti.inserisciCliente(GestioneClienti.java:11)
+	at EsameMarzo2020/Boundary.Main.main(Main.java:20)
+Caused by: java.lang.NumberFormatException: For input string: "21/01/"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
+	at java.base/java.lang.Integer.parseInt(Integer.java:658)
+	at java.base/java.lang.Integer.parseInt(Integer.java:776)
+	at com.h2database@1.4.199/org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:369)
+	at com.h2database@1.4.199/org.h2.value.ValueDate.parse(ValueDate.java:73)
+	... 13 more
+2020-03-21 13:34:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Serialization failed, cause: "java.io.NotSerializableException: Entity.PrincipioAttivo" [90026-199]
+	at com.h2database@1.4.199/org.h2.message.DbException.getJdbcSQLException(DbException.java:587)
+	at com.h2database@1.4.199/org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at com.h2database@1.4.199/org.h2.message.DbException.get(DbException.java:194)
+	at com.h2database@1.4.199/org.h2.util.JdbcUtils.serialize(JdbcUtils.java:380)
+	at com.h2database@1.4.199/org.h2.value.ValueJavaObject.getNoCopy(ValueJavaObject.java:49)
+	at com.h2database@1.4.199/org.h2.value.DataType.convertToValue1(DataType.java:1264)
+	at com.h2database@1.4.199/org.h2.value.DataType.convertToValue(DataType.java:1133)
+	at com.h2database@1.4.199/org.h2.jdbc.JdbcPreparedStatement.setObject(JdbcPreparedStatement.java:535)
+	at EsameMarzo2020/Database.FarmaciDAO.insertFarmaco(FarmaciDAO.java:23)
+	at EsameMarzo2020/Control.GestioneFarmacia.inserisciFarmaco(GestioneFarmacia.java:17)
+	at EsameMarzo2020/Boundary.Main.main(Main.java:26)
+Caused by: java.io.NotSerializableException: Entity.PrincipioAttivo
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1185)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:349)
+	at java.base/java.util.ArrayList.writeObject(ArrayList.java:863)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1130)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1497)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1433)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1179)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:349)
+	at com.h2database@1.4.199/org.h2.util.JdbcUtils.serialize(JdbcUtils.java:377)
+	... 7 more
+2020-03-21 13:39:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Parameter "#6" is not set; SQL statement:
+INSERT INTO FARMACI VALUES('A1',?,?,?,?,?,?); [90012-199]
+	at com.h2database@1.4.199/org.h2.message.DbException.getJdbcSQLException(DbException.java:587)
+	at com.h2database@1.4.199/org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at com.h2database@1.4.199/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.199/org.h2.message.DbException.get(DbException.java:181)
+	at com.h2database@1.4.199/org.h2.expression.Parameter.checkSet(Parameter.java:94)
+	at com.h2database@1.4.199/org.h2.command.Prepared.checkParameters(Prepared.java:180)
+	at com.h2database@1.4.199/org.h2.command.CommandContainer.update(CommandContainer.java:132)
+	at com.h2database@1.4.199/org.h2.command.Command.executeUpdate(Command.java:267)
+	at com.h2database@1.4.199/org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:200)
+	at com.h2database@1.4.199/org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:154)
+	at EsameMarzo2020/Database.FarmaciDAO.insertFarmaco(FarmaciDAO.java:25)
+	at EsameMarzo2020/Control.GestioneFarmacia.inserisciFarmaco(GestioneFarmacia.java:17)
+	at EsameMarzo2020/Boundary.Main.main(Main.java:26)
+2020-03-21 13:42:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PRINCIPIATTIVI" not found; SQL statement:
+INSERT INTO PRINCIPIATTIVI VALUES('P1',?,?,?,?); [42102-199]
+2020-03-21 14:06:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PRINCIPIATTIVI" not found; SQL statement:
+SELECT * FROM PRINCIPIATTIVI WHERE CODICE='P1'; [42102-199]
+2020-03-21 14:09:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CLIENTI" not found; SQL statement:
+INSERT INTO CLIENTI VALUES('DBLCIllABF7788',?,?,?,?,?); [42102-199]
+2020-03-21 14:09:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PRINCIPIATTIVI" not found; SQL statement:
+UPDATE PRINCIPIATTIVI SET QUANTITA=500 WHERE CODICE='P1'; [42102-199]
+2020-03-21 15:18:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CLIENTI" not found; SQL statement:
+INSERT INTO CLIENTI VALUES('DBLCIllABF7788',?,?,?,?,?); [42102-199]
+2020-03-21 15:53:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CLIENTI" already exists; SQL statement:
+CREATE TABLE CLIENTI( CF VARCHAR(30) PRIMARY KEY, NOME VARCHAR(30), COGNOME VARCHAR(30), DATADINASCITA VARCHAR(30), TESSERA IMAGE, CARTA VARCHAR(30)); [42101-199]
+2020-03-21 16:08:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CLIENTI" already exists; SQL statement:
+CREATE TABLE CLIENTI( CF VARCHAR(30) PRIMARY KEY, NOME VARCHAR(30), COGNOME VARCHAR(30), DATADINASCITA VARCHAR(30), TESSERA IMAGE, CARTA VARCHAR(30)); [42101-199]
